@@ -110,7 +110,7 @@ export default function Navbar() {
                   </DropdownMenu>
                 </li>
               </ul>
-              <Button className="rounded-[20px] w-[90px] hidden lg:flex items-center gap-[3px] h-9 bg-[#0095fb] relative font-dm_Sans">
+              <Button className="rounded-[20px] w-[90px] hidden lg:flex items-center gap-[3px] h-9 bg-[#0095fb] hover:bg-[#FFB500] duration-300 relative font-dm_Sans">
                 Login{" "}
                 <Image
                   width={12}
