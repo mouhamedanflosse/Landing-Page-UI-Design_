@@ -15,7 +15,7 @@ import {
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import MoveUpRight from "../../public/assets/svg/arrow.svg";
-import { routes } from "@/routesConig";
+import { routes } from "@/conifg/routesConig";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import NavMobile from "./MobileNav";
@@ -23,7 +23,7 @@ export default function Navbar() {
   const [language, setLanguage] = useState("English");
   const [open, setopen] = useState(false);
 
-  const router = useRouter()
+  const router = useRouter();
 
   const pathname = usePathname();
 
@@ -40,7 +40,12 @@ export default function Navbar() {
       <MaxWidthWrapper>
         <div className="flex justify-between  h-10">
           <div className="relative min-w-36 max-w-36 cursor-pointer">
-            <Image src={logo} fill alt="Dropify" onClick={ () => router.push("/")} />
+            <Image
+              src={logo}
+              fill
+              alt="Dropify"
+              onClick={() => router.push("/")}
+            />
           </div>
           <div className="flex item-center">
             <div className="lg:min-w-[657px] flex items-center justify-between gap-10">
@@ -64,7 +69,9 @@ export default function Navbar() {
                     </li>
                   );
                 })}
-                <li className="hidden text-[#9facba] text-[8px]  lg:block">|</li>
+                <li className="hidden text-[#9facba] text-[8px]  lg:block">
+                  |
+                </li>
                 <li className="mr-6">
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
